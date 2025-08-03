@@ -1,6 +1,4 @@
-# 📧 MailFlow - GenAI Mailer System Interview Project
-
-<div align="center">
+# 📧 MailFlow - AI-Powered Email Marketing Platform
 
 <div align="center">
 
@@ -13,278 +11,388 @@
     ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝╚══════╝╚═╝     ╚══════╝ ╚═════╝  ╚══╝╚══╝
 ```
 
-<h3>🚀 AI-Powered Email Marketing Platform</h3>
-<p><em>Build the future of email marketing with GenAI</em></p>
+<h3>🚀 Next-Generation Email Marketing with AI</h3>
+<p><em>The future of email marketing is here - powered by artificial intelligence</em></p>
 
-[![Made with ❤️](https://img.shields.io/badge/Made%20with-❤️-red.svg)](https://github.com/Glanzs-tech/MailFlow-Interview-Sys)
-[![Interview Project](https://img.shields.io/badge/Interview-Project-4F46E5.svg)](https://github.com/Glanzs-tech/MailFlow-Interview-Sys)
-[![Full Stack](https://img.shields.io/badge/Full%20Stack-GenAI-06B6D4.svg)](https://github.com/Glanzs-tech/MailFlow-Interview-Sys)
-
-</div>
-
-*A modern, AI-powered email marketing platform built for the GenAI era*
-
-[![Stars](https://img.shields.io/github/stars/Glanzs-tech/MailFlow-Interview-Sys?style=social)](https://github.com/Glanzs-tech/MailFlow-Interview-Sys/stargazers)
-[![Forks](https://img.shields.io/github/forks/Glanzs-tech/MailFlow-Interview-Sys?style=social)](https://github.com/Glanzs-tech/MailFlow-Interview-Sys/network/members)
-[![Issues](https://img.shields.io/github/issues/Glanzs-tech/MailFlow-Interview-Sys)](https://github.com/Glanzs-tech/MailFlow-Interview-Sys/issues)
-[![License](https://img.shields.io/github/license/Glanzs-tech/MailFlow-Interview-Sys)](LICENSE)
+[![Made with ❤️](https://img.shields.io/badge/Made%20with-❤️-red.svg)](https://github.com/your-repo/mailflow)
+[![React](https://img.shields.io/badge/React-18.2.0-61DAFB.svg)](https://reactjs.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-18+-339933.svg)](https://nodejs.org/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-7.0-47A248.svg)](https://mongodb.com/)
+[![OpenAI](https://img.shields.io/badge/OpenAI-GPT--4-412991.svg)](https://openai.com/)
+[![Docker](https://img.shields.io/badge/Docker-Ready-2496ED.svg)](https://docker.com/)
 
 </div>
 
-## 🎯 Welcome to Your Full-Stack GenAI Engineer Interview!
+## ✨ Features
 
-Congratulations on making it to the technical interview stage at **Glanzs**! Instead of traditional whiteboard coding, we believe in evaluating your skills through real-world project development. You'll be building **MailFlow** - a modern email marketing platform with AI capabilities.
+### 🤖 AI-Powered Marketing
+- **Smart Content Generation**: AI-generated email content with GPT-4
+- **Subject Line Optimization**: AI-powered subject line suggestions and A/B testing
+- **Send Time Optimization**: Machine learning-based optimal send time prediction
+- **Personalization Engine**: Dynamic content personalization using AI
+- **Performance Analytics**: AI-driven campaign performance insights
 
-![Coding GIF](https://media.giphy.com/media/ZVik7pBtu9dNS/giphy.gif)
+### 📊 Advanced Analytics
+- **Real-time Dashboard**: Beautiful, responsive analytics dashboard
+- **Engagement Tracking**: Open rates, click rates, conversion tracking
+- **A/B Testing Suite**: Comprehensive testing with AI-powered winner selection
+- **Predictive Analytics**: Forecast campaign performance and engagement
+- **Custom Reports**: Generate detailed performance reports
 
-## 🚀 Getting Started
+### 👥 Contact Management
+- **Smart Segmentation**: AI-powered audience segmentation
+- **Lead Scoring**: Automatic lead scoring based on engagement
+- **Contact Profiles**: Detailed contact profiles with engagement history
+- **Import/Export**: Bulk contact management with CSV support
+- **GDPR Compliance**: Built-in compliance features
+
+### 🎨 Design & User Experience
+- **Modern UI**: Clean, modern interface inspired by ConvertKit and Beehiiv
+- **Drag & Drop Editor**: Visual email template builder
+- **Mobile Responsive**: Perfect display on all devices
+- **Dark Mode**: Built-in dark mode support
+- **Accessibility**: WCAG 2.1 compliant interface
+
+### 🔧 Developer Features
+- **REST API**: Complete RESTful API for integrations
+- **Webhook Support**: Real-time event notifications
+- **SDK Support**: JavaScript/Node.js SDK
+- **Database Agnostic**: MongoDB with easy migration support
+- **Microservices Ready**: Scalable architecture
+
+## 🚀 Quick Start
 
 ### Prerequisites
-Before you begin, ensure you have:
-- Node.js (v18 or higher)
-- Python (v3.9 or higher)
-- Git
-- Your favorite code editor
-- A cup of coffee ☕
 
-### 📋 How to Participate
+- Node.js 18+ 
+- MongoDB 7+
+- Redis (optional, for caching)
+- OpenAI API Key (for AI features)
 
-1. **⭐ Star this repository** (This helps us track participants)
-2. **🍴 Fork this repository** to your GitHub account
-3. **📥 Clone your fork** locally:
+### Installation
+
+1. **Clone the repository**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/MailFlow-Interview-Sys.git
-   cd MailFlow-Interview-Sys
+   git clone https://github.com/your-repo/mailflow.git
+   cd mailflow
    ```
-4. **🚀 Quick Setup**:
+
+2. **Install dependencies**
    ```bash
-   # Run the setup script
-   chmod +x setup.sh
-   ./setup.sh
+   # Install frontend dependencies
+   npm install
    
-   # Or manual setup
-   npm run install:all
+   # Install backend dependencies
+   cd backend
+   npm install
+   cd ..
    ```
-5. **🌿 Create Phase 1 branch**:
+
+3. **Setup environment variables**
    ```bash
-   git checkout -b phase-1/your-name-core-platform
+   # Copy environment template
+   cp backend/.env.example backend/.env
+   
+   # Edit with your configuration
+   nano backend/.env
    ```
 
-## 📊 Project Overview
+4. **Start the application**
+   ```bash
+   # Development mode (starts both frontend and backend)
+   npm run dev
+   
+   # Or start separately
+   npm start                    # Frontend (React)
+   cd backend && npm run dev    # Backend (Node.js)
+   ```
 
-MailFlow is a comprehensive email marketing platform similar to Mailchimp, but enhanced with modern GenAI capabilities. You'll build this in three progressive phases:
+### 🐳 Docker Setup
 
-## 📅 Interview Timeline & Expectations
+The easiest way to get started is with Docker:
 
-**🚀 Timeline starts automatically when you raise your Phase-1 PR!**
-**Total Duration**: 7 days from your Phase-1 PR
-**Final Submission**: Day 7 (11:59 PM IST)
+```bash
+# Start all services
+docker-compose up -d
 
-### 📋 Phase Schedule (Dynamic Timeline):
-- **Phase 1**: Days 1-3 (from Phase-1 PR date) - Core Platform
-- **Phase 2**: Days 4-5 - AI Integration
-- **Phase 3**: Days 6-7 - Deployment
-- **Final Review**: Day 7 - Submit final PR
+# View logs
+docker-compose logs -f
 
-### ⏰ Daily Expectations:
-- **Daily Progress Updates**: Submit commits by 6 PM IST each day
-- **Phase Completion**: Submit PR within 24 hours of phase deadline
-- **Communication**: Respond to feedback within 4 hours during business hours
+# Stop services
+docker-compose down
+```
 
-### 📊 Your Personal Timeline:
-Once you raise your Phase-1 PR, your personalized timeline will be:
-- **Your Start Date**: `[Automatically set when Phase-1 PR is created]`
-- **Phase 1 Deadline**: `[Start Date + 3 days]`
-- **Phase 2 Deadline**: `[Start Date + 5 days]`
-- **Final Submission**: `[Start Date + 7 days]`
+## 📖 Configuration
 
-<div align="center">
+### Environment Variables
+
+Create a `.env` file in the backend directory:
+
+```env
+# Application
+NODE_ENV=development
+PORT=8000
+FRONTEND_URL=http://localhost:3000
+
+# Database
+MONGODB_URI=mongodb://localhost:27017/mailflow
+REDIS_URL=redis://localhost:6379
+
+# Authentication
+JWT_SECRET=your-super-secret-jwt-key
+JWT_EXPIRE=7d
+JWT_REFRESH_SECRET=your-refresh-token-secret
+JWT_REFRESH_EXPIRE=30d
+
+# Email Service (choose one)
+# SendGrid
+SENDGRID_API_KEY=your-sendgrid-api-key
+SENDGRID_FROM_EMAIL=noreply@yourapp.com
+SENDGRID_FROM_NAME=MailFlow
+
+# SMTP (Alternative)
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=your-email@gmail.com
+SMTP_PASS=your-app-password
+
+# AI Features
+OPENAI_API_KEY=your-openai-api-key
+OPENAI_MODEL=gpt-4
+OPENAI_MAX_TOKENS=1000
+
+# File Upload
+MAX_FILE_SIZE=10485760
+ALLOWED_FILE_TYPES=jpg,jpeg,png,gif,pdf
+
+# Security
+BCRYPT_SALT_ROUNDS=12
+RATE_LIMIT_WINDOW_MS=900000
+RATE_LIMIT_MAX_REQUESTS=100
+```
+
+## 🚀 Deployment
+
+### One-Click Deployment
+
+Use our deployment script for easy deployment to various platforms:
+
+```bash
+# Make script executable
+chmod +x deploy.sh
+
+# Interactive deployment
+./deploy.sh
+
+# Or deploy to specific platform
+./deploy.sh railway    # Railway
+./deploy.sh vercel     # Vercel (frontend only)
+./deploy.sh docker     # Docker
+./deploy.sh heroku     # Heroku
+```
+
+### Manual Deployment Options
+
+#### Railway (Recommended)
+```bash
+# Install Railway CLI
+npm install -g @railway/cli
+
+# Login and deploy
+railway login
+railway up
+```
+
+#### Vercel (Frontend)
+```bash
+# Install Vercel CLI
+npm install -g vercel
+
+# Deploy
+npm run build
+vercel --prod
+```
+
+#### Docker Production
+```bash
+# Build and run
+docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
+```
+
+## 📚 API Documentation
+
+### Authentication
+
+All API endpoints require authentication via JWT tokens:
+
+```javascript
+// Login
+POST /api/auth/login
+{
+  "email": "user@example.com",
+  "password": "password123"
+}
+
+// Response
+{
+  "success": true,
+  "data": {
+    "user": {...},
+    "token": "jwt-token",
+    "refreshToken": "refresh-token"
+  }
+}
+```
+
+### Campaigns
+
+```javascript
+// Create campaign
+POST /api/campaigns
+Authorization: Bearer <token>
+{
+  "name": "Summer Sale 2024",
+  "subject": "🌞 Summer Sale - 50% Off!",
+  "content": {
+    "html": "<h1>Summer Sale</h1>...",
+    "text": "Summer Sale..."
+  },
+  "recipients": {
+    "type": "all_contacts"
+  }
+}
+
+// Get campaigns
+GET /api/campaigns
+Authorization: Bearer <token>
+
+// Campaign analytics
+GET /api/campaigns/:id/analytics
+Authorization: Bearer <token>
+```
+
+### AI Features
+
+```javascript
+// Generate email content
+POST /api/ai/generate-content
+Authorization: Bearer <token>
+{
+  "prompt": "Create a promotional email for summer sale",
+  "context": {
+    "industry": "retail",
+    "tone": "friendly",
+    "targetAudience": "young adults"
+  }
+}
+
+// Generate subject lines
+POST /api/ai/generate-subjects
+Authorization: Bearer <token>
+{
+  "emailContent": "Email content here...",
+  "context": {
+    "campaignType": "promotional"
+  }
+}
+```
+
+## 🏗️ Architecture
 
 ```mermaid
-graph LR
-    A[Phase 1: Core Platform] --> B[Phase 2: AI Integration]
-    B --> C[Phase 3: Deployment]
+graph TB
+    A[React Frontend] --> B[Node.js Backend]
+    B --> C[MongoDB Database]
+    B --> D[Redis Cache]
+    B --> E[OpenAI API]
+    B --> F[Email Service]
+    B --> G[File Storage]
     
-    A1[Frontend UI] --> A
-    A2[Backend API] --> A
-    A3[Database] --> A
+    H[Load Balancer] --> A
+    H --> B
     
-    B1[LLM Service] --> B
-    B2[AI Content Generation] --> B
-    B3[Smart Analytics] --> B
-    
-    C1[Docker] --> C
-    C2[Cloud Deploy] --> C
-    C3[CI/CD] --> C
+    I[CDN] --> A
+    J[Monitoring] --> B
+    K[Backup Service] --> C
 ```
 
-</div>
+### Tech Stack
 
-## 🎯 Phase 1: Core Platform (Days 1-3)
+**Frontend:**
+- React 18 with Hooks
+- React Router for navigation
+- React Query for state management
+- Tailwind CSS for styling
+- Lucide React for icons
+- React Hook Form for forms
 
-```
-    💻 PHASE 1: BUILD THE FOUNDATION
-    
-    Day 1: 🔐 Auth System
-    Day 2: 📊 Dashboard + 📧 Campaigns
-    Day 3: 👥 Contacts + 📤 Send Emails
-```
+**Backend:**
+- Node.js with Express
+- MongoDB with Mongoose
+- JWT for authentication
+- OpenAI GPT-4 integration
+- SendGrid/Nodemailer for emails
+- Redis for caching
+- Multer for file uploads
 
-### 🎨 Essential Frontend Features
-- [ ] User authentication (login/register)
-- [ ] Dashboard with campaign overview
-- [ ] Simple email editor
-- [ ] Contact list management
-- [ ] Campaign creation and sending
-- [ ] Basic analytics
+**DevOps:**
+- Docker & Docker Compose
+- GitHub Actions CI/CD
+- Railway/Vercel deployment
+- MongoDB Atlas
+- Nginx reverse proxy
 
-### 🔧 Essential Backend Features
-- [ ] JWT authentication API
-- [ ] Campaign CRUD operations
-- [ ] Contact management API
-- [ ] Email sending service
-- [ ] Basic analytics tracking
+## 🧪 Testing
 
-**Deadline: Day 3 (11:59 PM IST)**
+```bash
+# Frontend tests
+npm test
 
-## 🤖 Phase 2: AI Integration (Days 4-5)
+# Backend tests
+cd backend
+npm test
 
-```
-    🤖 PHASE 2: ADD AI SUPERPOWERS
-    
-    Day 4: 🧠 AI Content Generation
-    Day 5: ⚡ Smart Features & Optimization
-```
+# Run all tests
+npm run test:all
 
-### 🧠 AI Features
-- [ ] AI email content generation
-- [ ] Smart subject line suggestions
-- [ ] Email personalization
-- [ ] Send time optimization
-- [ ] A/B testing with AI
-
-**Deadline: Day 5 (11:59 PM IST)**
-
-## 🚀 Phase 3: Deployment (Days 6-7)
-
-```
-    🚀 PHASE 3: SHIP TO PRODUCTION
-    
-    Day 6: 🐳 Docker + Cloud Setup
-    Day 7: 🌐 Live Deployment + Final Polish
+# Coverage report
+npm run test:coverage
 ```
 
-### ☁️ Deployment Goals
-- [ ] Docker containerization
-- [ ] Cloud deployment (Vercel/Railway)
-- [ ] Database hosting
-- [ ] Environment configuration
-- [ ] Live application
+## 🤝 Contributing
 
-**Final Deadline: Day 7 (11:59 PM IST)**
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
 
-## 📝 Submission Guidelines
-
-### 🔄 Pull Request Process
-
-1. **Create feature branches** for each phase:
-   ```bash
-   git checkout -b phase-1/core-platform
-   git checkout -b phase-2/ai-integration
-   git checkout -b phase-3/deployment
-   ```
-
-2. **Commit frequently** with descriptive messages:
-   ```bash
-   git commit -m "feat: implement email template editor with drag-and-drop"
-   git commit -m "fix: resolve authentication token expiry issue"
-   ```
-
-3. **Create Pull Requests** for each phase:
-   - Use the provided PR templates
-   - Include screenshots/GIFs of functionality
-   - Document any challenges faced
-   - Explain your technical decisions
-
-### 📊 Evaluation Criteria
-
-| Category | Weight | Description |
-|----------|--------|-------------|
-| **Code Quality** | 25% | Clean, readable, maintainable code |
-| **Functionality** | 25% | Features work as expected |
-| **AI Integration** | 20% | Creative and effective use of GenAI |
-| **Architecture** | 15% | System design and scalability |
-| **Documentation** | 10% | Clear setup and usage instructions |
-| **Innovation** | 5% | Creative solutions and extra features |
-
-## 🎨 Design Resources
-
-### 🎯 UI/UX Inspiration
-- [Mailchimp](https://mailchimp.com) - Reference for core functionality
-- [ConvertKit](https://convertkit.com) - Modern email marketing UI
-- [Beehiiv](https://beehiiv.com) - Clean, modern design
-
-### 🎨 Design Assets
-- **Color Palette**: 
-  - Primary: `#4F46E5` (Indigo)
-  - Secondary: `#06B6D4` (Cyan)
-  - Accent: `#F59E0B` (Amber)
-- **Typography**: Inter, Roboto, or system fonts
-- **Icons**: Heroicons, Lucide, or Feather icons
-
-## 🆘 Need Help?
-
-![Help GIF](https://media.giphy.com/media/l2JhpjWPccQhsAMfu/giphy.gif)
-
-### 📞 Getting Support
-- **Slack Channel**: #mailflow-interview
-- **Email**: support@glanzs.com
-- **Direct Contact**: juni@glanzs.com
-- **Office Hours**: Mon-Fri, 2-4 PM IST
-- **Response Time**: Within 4 hours during business days
-
-### 🤝 Collaboration Guidelines
-- Feel free to ask questions about requirements
-- Discuss technical approaches before major decisions
-- Share progress updates in your PRs
-- Don't hesitate to reach out if you're stuck!
-
-## 📚 Resources & References
-
-### 🔧 Technical Documentation
-- [Email API Best Practices](https://sendgrid.com/docs/api-reference/)
-- [React Email Templates](https://react.email/)
-- [OpenAI API Documentation](https://platform.openai.com/docs)
-- [Docker Best Practices](https://docs.docker.com/develop/dev-best-practices/)
-
-### 📖 Learning Materials
-- [Email Marketing Fundamentals](https://blog.mailchimp.com/email-marketing-guide/)
-- [GenAI in Marketing](https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/the-age-of-ai-powered-marketing)
-
-## 🏆 Bonus Points
-
-Impress us with these additional features:
-- [ ] Real-time collaboration on email templates
-- [ ] Advanced email automation workflows
-- [ ] Integration with popular CRM systems
-- [ ] Mobile app (React Native/Flutter)
-- [ ] Advanced AI features (image generation, voice synthesis)
-- [ ] Comprehensive test coverage (>80%)
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+## 🆘 Support
+
+- **Documentation**: [Full Documentation](https://docs.mailflow.com)
+- **Issues**: [GitHub Issues](https://github.com/your-repo/mailflow/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/your-repo/mailflow/discussions)
+- **Email**: support@mailflow.com
+
+## 🙏 Acknowledgments
+
+- [OpenAI](https://openai.com) for AI capabilities
+- [ConvertKit](https://convertkit.com) for UI inspiration
+- [Beehiiv](https://beehiiv.com) for design inspiration
+- [Mailchimp](https://mailchimp.com) for functionality reference
+
 ---
 
 <div align="center">
 
-**Ready to build the future of email marketing?** 🚀
+**Built with ❤️ by the MailFlow Team**
 
-![Success GIF](https://media.giphy.com/media/26u4cqiYI30juCOGY/giphy.gif)
-
-*Good luck, and we can't wait to see what you create!*
-
-**Questions? Reach out anytime!** 💬
+[⭐ Star us on GitHub](https://github.com/your-repo/mailflow) | [🐦 Follow us on Twitter](https://twitter.com/mailflow) | [💬 Join our Discord](https://discord.gg/mailflow)
 
 </div>
