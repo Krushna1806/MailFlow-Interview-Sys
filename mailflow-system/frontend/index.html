@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MailFlow - GenAI Interview Mailer System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-mail-bulk"></i>
+                    <h1>MailFlow</h1>
+                </div>
+                <nav class="nav">
+                    <a href="#dashboard" class="nav-link active" data-tab="dashboard">
+                        <i class="fas fa-tachometer-alt"></i>
+                        Dashboard
+                    </a>
+                    <a href="#compose" class="nav-link" data-tab="compose">
+                        <i class="fas fa-edit"></i>
+                        Compose
+                    </a>
+                    <a href="#interviews" class="nav-link" data-tab="interviews">
+                        <i class="fas fa-users"></i>
+                        Interviews
+                    </a>
+                    <a href="#templates" class="nav-link" data-tab="templates">
+                        <i class="fas fa-file-alt"></i>
+                        Templates
+                    </a>
+                    <a href="#analytics" class="nav-link" data-tab="analytics">
+                        <i class="fas fa-chart-bar"></i>
+                        Analytics
+                    </a>
+                </nav>
+                <div class="user-menu">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Admin</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Dashboard Tab -->
+            <div id="dashboard" class="tab-content active">
+                <div class="dashboard">
+                    <h2>Dashboard Overview</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="stat-details">
+                                <h3 id="emails-sent">0</h3>
+                                <p>Emails Sent</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-calendar-check"></i>
+                            </div>
+                            <div class="stat-details">
+                                <h3 id="interviews-scheduled">0</h3>
+                                <p>Interviews Scheduled</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-reply"></i>
+                            </div>
+                            <div class="stat-details">
+                                <h3 id="response-rate">0%</h3>
+                                <p>Response Rate</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="stat-details">
+                                <h3 id="ai-generated">0</h3>
+                                <p>AI Generated</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recent-activity">
+                        <h3>Recent Activity</h3>
+                        <div class="activity-list" id="activity-list">
+                            <!-- Activity items will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Compose Tab -->
+            <div id="compose" class="tab-content">
+                <div class="compose-section">
+                    <h2>Compose Email</h2>
+                    <form id="compose-form" class="compose-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="recipient">Recipient Email</label>
+                                <input type="email" id="recipient" name="recipient" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="template-select">Template</label>
+                                <select id="template-select" name="template">
+                                    <option value="">Select Template</option>
+                                    <option value="interview-invitation">Interview Invitation</option>
+                                    <option value="follow-up">Follow-up</option>
+                                    <option value="rejection">Rejection</option>
+                                    <option value="offer">Job Offer</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+
+                        <div class="ai-assist">
+                            <button type="button" id="ai-generate" class="ai-btn">
+                                <i class="fas fa-magic"></i>
+                                Generate with AI
+                            </button>
+                            <div class="ai-options">
+                                <label>
+                                    <input type="checkbox" id="formal-tone"> Formal Tone
+                                </label>
+                                <label>
+                                    <input type="checkbox" id="include-company"> Include Company Details
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email-body">Email Body</label>
+                            <textarea id="email-body" name="body" rows="10" required></textarea>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" id="save-draft" class="btn btn-secondary">
+                                <i class="fas fa-save"></i>
+                                Save Draft
+                            </button>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i>
+                                Send Email
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Interviews Tab -->
+            <div id="interviews" class="tab-content">
+                <div class="interviews-section">
+                    <div class="section-header">
+                        <h2>Interview Management</h2>
+                        <button id="schedule-interview" class="btn btn-primary">
+                            <i class="fas fa-plus"></i>
+                            Schedule Interview
+                        </button>
+                    </div>
+
+                    <div class="interview-filters">
+                        <select id="status-filter">
+                            <option value="">All Status</option>
+                            <option value="scheduled">Scheduled</option>
+                            <option value="completed">Completed</option>
+                            <option value="cancelled">Cancelled</option>
+                        </select>
+                        <input type="date" id="date-filter">
+                        <input type="search" id="search-interviews" placeholder="Search candidates...">
+                    </div>
+
+                    <div class="interview-list" id="interview-list">
+                        <!-- Interview items will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Templates Tab -->
+            <div id="templates" class="tab-content">
+                <div class="templates-section">
+                    <div class="section-header">
+                        <h2>Email Templates</h2>
+                        <button id="create-template" class="btn btn-primary">
+                            <i class="fas fa-plus"></i>
+                            Create Template
+                        </button>
+                    </div>
+
+                    <div class="templates-grid" id="templates-grid">
+                        <!-- Template cards will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Analytics Tab -->
+            <div id="analytics" class="tab-content">
+                <div class="analytics-section">
+                    <h2>Analytics & Reports</h2>
+                    <div class="analytics-grid">
+                        <div class="chart-container">
+                            <h3>Email Performance</h3>
+                            <canvas id="email-chart"></canvas>
+                        </div>
+                        <div class="chart-container">
+                            <h3>Interview Success Rate</h3>
+                            <canvas id="success-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Modal for Schedule Interview -->
+        <div id="interview-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Schedule Interview</h3>
+                    <span class="close">&times;</span>
+                </div>
+                <form id="interview-form">
+                    <div class="form-group">
+                        <label for="candidate-name">Candidate Name</label>
+                        <input type="text" id="candidate-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="candidate-email">Candidate Email</label>
+                        <input type="email" id="candidate-email" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="interview-date">Date</label>
+                            <input type="date" id="interview-date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="interview-time">Time</label>
+                            <input type="time" id="interview-time" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="interview-type">Interview Type</label>
+                        <select id="interview-type" required>
+                            <option value="">Select Type</option>
+                            <option value="phone">Phone Interview</option>
+                            <option value="video">Video Interview</option>
+                            <option value="in-person">In-Person</option>
+                        </select>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Schedule & Send Invitation</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Loading Spinner -->
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p>Processing...</p>
+        </div>
+
+        <!-- Toast Notifications -->
+        <div id="toast-container" class="toast-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
